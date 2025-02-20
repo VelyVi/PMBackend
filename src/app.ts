@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-dotenv.config(); // Cargar variables de entorno desde el archivo .env
+dotenv.config();
 
 import { envs } from "./config/env";
 import { PostgresDataBase } from "./data";
@@ -8,7 +8,6 @@ import { Server } from "./presentation/server";
 
 async function main() {
 
-  //Iniciamos la base de datos
   const postgres = new PostgresDataBase({
     username: envs.DB_USERNAME,
     password: envs.DB_PASSWORD,
